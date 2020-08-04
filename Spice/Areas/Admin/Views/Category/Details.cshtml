@@ -1,0 +1,27 @@
+﻿@model Spice.Models.Category
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<br />
+<form method="post" asp-action="Details">
+    <div class="backgroundWhite">
+        <h3 class="text-dark-50">Category Details</h3>
+        <br />
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Name" class="col-form-label"></label>
+            </div>
+            <div class="col-8">
+                <input asp-for="Name" readonly class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-8 offset-2">
+                <partial name="_RedirectToEdit" model="Model.Id" />
+            </div>
+        </div>
+    </div>
+</form>
+
